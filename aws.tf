@@ -1,11 +1,5 @@
 # Un-comment this if you want to use S3-Bucket for Saving Terraform State
-# resource "aws_s3_bucket" "terraform-state-aws-s3-bucket" {
-#   bucket = "terraform-state-aws-s3-bucket"
-#   acl    = "private"
-#   tags = {
-#     Name = "Terraform State AWS S3 Bucket"
-#   }
-# }
+# Make sure this Bucket is Pre-created for this case
 # terraform {
 #   backend "s3" {
 #     bucket = "terraform-state-aws-s3-bucket"
