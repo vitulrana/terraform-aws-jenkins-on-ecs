@@ -33,3 +33,11 @@ variable "ami" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+variable "ecs_task_role_arn" {
+  default = ""
+}
+
+variable "ecs_execution_role_arn" {
+  default = ""
+}

@@ -11,8 +11,8 @@ resource "aws_ecs_service" "jenkins" {
 
 resource "aws_ecs_task_definition" "jenkins-task" {
   family = "jenkins-task"
-  task_role_arn = "arn:aws:iam::474429983342:role/ecsTaskExecutionRole"
-  execution_role_arn = "arn:aws:iam::474429983342:role/ecsTaskExecutionRole"
+  task_role_arn = var.ecs_task_role_arn
+  execution_role_arn = var.ecs_execution_role_arn
   requires_compatibilities = ["EC2"]
   container_definitions = <<DEFINITION
 [
