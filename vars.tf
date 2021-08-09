@@ -1,10 +1,6 @@
-variable "access_key"{
-  default = ""
+variable "profile" {
+  default = "default"
 } 
-
-variable "secret_key" {
-  default = ""                                                                                                  
-}
 
 variable "key_name" {
   default = ""                                                                                                  
