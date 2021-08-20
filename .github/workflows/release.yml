@@ -1,0 +1,18 @@
+name: release
+
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - master
+jobs:
+  release:
+    if: contains(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Bundle and upload versioned module on release
+        run: zip -r $VERSION.zip *
